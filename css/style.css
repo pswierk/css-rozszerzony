@@ -1,0 +1,219 @@
+/*before i after NIE ISTNIEJA w dokumencie, jako programisci jestesmy w stanie dodac taki element. Aby utworzyc before iafter MUSIMY ustawic wlasciwosc CONTENT (moze byc pusta content: '';)*/
+
+#before_after p::before {
+    content: 'P ';
+    color: red;
+}
+
+#before_after p::after {
+    content: ' P';
+    color: red;
+}
+
+/*::first-letter zmienia pierwsza litere w danym elemencie*/
+
+#before_after p::first-letter {
+    color: yellow;
+    font-weigt: bold;
+}
+
+/*::first-line zmienia wyglad pierwszej lini tekstu */
+
+#before_after p::first-line {
+    font-size: 20px;
+    color: red,
+}
+
+#linki a {
+    text-decoration: none;
+}
+
+/*pseudo-klasy linkow*/
+
+/*link - nioedwiedzony*/
+
+#linki a:link {
+    color: hotpink;
+    font-style: italic;
+}
+
+#linki a:visited {
+    color: grey;
+}
+
+/* :hover - po najechaniu myszka */
+
+#linki a:hover {
+    border: 1px solid black;
+}
+
+/*:active - od momentu klikniecia do momentu puszczenai LPM*/
+
+#linki a:active {
+    color: red;
+    font-weight: bold;
+}
+
+:focus #inputy input:focus {
+    border: 3px solid black;
+
+}
+
+/*:target - okresla wyglad elementu, do ktorego prowadzi KOTWICA*/
+
+div:target {
+    border: 1px solid black;
+}
+
+div:lang(pl) {
+    border: 3px solid blue;
+}
+
+/*:first-child - okresla wyglad pierwszego zagniezdzonego elementu*/
+
+#childs ul li:first-child {
+    font-size: 30px;
+    color: red;
+}
+
+/*:last-child - okresla wyglad ostatniego zagniezdzonego elementu*/
+
+#childs ul li:last-child {
+    background-color: yellow;
+}
+
+/*:only-child - okresla wyglad JEDYNEGO elementu swojego rodzica*/
+
+#before_after p:only-child {
+    color: violet;
+}
+
+/*:empty - lapie element który nie ma wartosci (nic zagniezdzonego, lacznie z tekstem )*/
+
+/*
+#childs span:empty {
+    display: block;
+    height: : 200px;
+    width: 200px;
+    background-color: green;
+}
+/*:nth-child() wyszukuje dzieci wedlepodanego wzoru/ :nth-last rozpoczyna liczenie od pierwszego do ostatniego, :nth-last-child odwrotnie*/
+
+/*
+#childs ul li:nth-child(even) {
+    background-color: blueviolet;
+} 
+
+#childs ul li:nth-child(5) {
+    background-color: green;
+}
+*/
+
+#childs ul li:nth-child(4n+1) {
+    background-color: green;
+}
+
+/*selektory atrybutow*/
+
+#atrybuty input[type] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*po okreslonej wartosci atrybutu*/
+
+#atrybuty input[type="tel"] {
+    border: 5px solid black;
+}
+
+#atrybuty input[type ~ ="opis"] {
+    border: 5px solid red;
+}
+
+#atrybuty input[type*="op"] {
+    border: 5px solid violet;
+}
+
+/*po wartosci atrybutu, ktora zaczyna sie od podanego ciagu znakow*/
+
+#atrybuty input[type^="pierwszy"] {
+    border: 5px solid red;
+}
+
+/*po wartosci atrybutu, ktory konczy sie na podany ciag znakow*/
+
+#atrybuty input[type$="q"] {
+    border: 5px solid orange;
+}
+
+#inline-block {
+    text-align: center;
+}
+
+#inline-block div {
+    display: inline-block;
+    width: 50%;
+    background: red;
+}
+
+#main-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: bisque;
+}
+
+#main-nav ul li {
+    text-align: center;
+    padding: 0;
+}
+
+#main-nav ul li {
+    display: inline-block;
+}
+
+#floatowanie img {
+    float: right;
+}
+
+#floatowanie p {
+    clear: right;
+}
+
+#float_inline_block {
+    background-color: black;
+    text-align: centre;
+}
+
+#float_inline_block .inner {
+    display: inline-block;
+    height: 300px;
+    background-color: red;
+    width: 33.1%;
+    float: left;
+
+}
+
+#float_inline_block .clear {
+    clear: both;
+}
+
+#transition {
+/*  width: 400px;
+    height: 300PX;
+    background-color: blue;
+    transition-property: background-color, width;
+    transition-duration: 4s;
+    transition-delay: 2s;*/
+    transition: all 0.4s linear;
+
+}
+
+#transition:hover {
+    background-color: red;
+    width: 800px;
+
+}
